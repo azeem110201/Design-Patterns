@@ -2,13 +2,13 @@ package observer;
 
 public class Main {
     public static void main(String[] args) {
-        Channel channel = new Channel();
+        IChannel channel = new Channel();
 
-        Subscriber subscriber_1 = new Subscriber("ABC");
-        Subscriber subscriber_2 = new Subscriber("XYZ");
-        Subscriber subscriber_3 = new Subscriber("QWERTY");
-        Subscriber subscriber_4 = new Subscriber("JOHN");
-        Subscriber subscriber_5 = new Subscriber("MARRY");
+        ISubscribers subscriber_1 = new Subscriber("ABC");
+        ISubscribers subscriber_2 = new Subscriber("XYZ");
+        ISubscribers subscriber_3 = new Subscriber("QWERTY");
+        ISubscribers subscriber_4 = new Subscriber("JOHN");
+        ISubscribers subscriber_5 = new Subscriber("MARRY");
 
 
         channel.subscribeChannel(subscriber_1);
@@ -24,11 +24,5 @@ public class Main {
         subscriber_5.subscribeChannel(channel);
 
         channel.upload("How to Learning Programming");
-
-        System.out.println("*************************");
-
-        channel.unSubscribeChannel(subscriber_4);
-
-        channel.upload("How to be productive");
     }
 }
