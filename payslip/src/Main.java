@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        Payslip payslip = new PayslipBuilder().setHra(10).setDa(75).getPaySlip();
+        Payslip payslip = new Payslip(10, 75, 0);
 
         System.out.println(payslip);
 
